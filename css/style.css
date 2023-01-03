@@ -1,0 +1,166 @@
+:root{
+  --font-family: 'Red Hat Display', 'Verdana', sans-serif;
+  --main-bg-color: hsl(225, 100%, 94%);
+  --desktop-bg-image: url('../images/pattern-background-desktop.svg');;
+  --mobile-bg-image: url('../images/pattern-background-mobile.svg');
+  --main-text-color: hsl(224, 23%, 55%);
+  --change-text-color: hsl(245, 75%, 52%);
+  --payment-button-bg-color: hsl(245, 75%, 52%);
+  --inner-border-radius: 0.5em;
+  --payment-text-color: hsl(225, 100%, 98%);
+  --cancel-text-color: hsl(224, 23%, 55%);
+  --emphasis-text-color: hsl(223, 47%, 23%);
+  --active-color: hsl(245, 83%, 68%);
+}
+
+button{
+  font-family: var(--font-family);
+  font-weight: 700;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+  color: var(--main-text-color);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  line-height: 1.5;
+  font-weight: 700;
+  background-color: var(--main-bg-color);
+  background-image: var(--mobile-bg-image);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.change,
+.cancel_order{
+  background: none;
+  border-style: none;
+}
+
+.change{
+  margin-left: auto;
+  text-decoration: underline;
+  color: var(--change-text-color);
+}
+
+.change:hover{
+  color: var(--active-color);
+}
+
+html{
+  font-size: 1em;
+}
+
+main{
+  background-color: white;
+  border-radius: 1em;
+  box-shadow: 0 1em 1em 0 hsla(245, 75%, 52%, 0.1);
+  margin: 0 auto;
+  text-align: center;
+  width: 20em;
+}
+
+main::before{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 9em;
+  background-image: url('../images/illustration-hero.svg');
+  background-position: center;
+  background-size: contain;
+  border-radius: 1em 1em 0 0;
+}
+
+.order_plan{
+  display: flex;
+  background-color: hsl(225, 100%, 98%);
+  padding:1em;
+}
+
+.order_plan,
+.payment_buttons > button{
+  border-radius: var(--inner-border-radius);
+}
+
+.order_plan::before{
+  content: url('../images/icon-music.svg');
+}
+
+.order_summary{
+  padding: 1.5em 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.payment_buttons > button{
+  width: 100%;
+  padding: 1em;
+  border-style: none;
+  height: 3.5em;
+}
+
+.order_summary > h1{
+  font-size: 1.3em;
+}
+
+.emphasis_text{
+  color: var(--emphasis-text-color);
+  font-weight: 900;
+}
+
+.order_summary > p{
+  font-weight: 500;
+  margin: 0 1em;
+}
+
+.plan_detail{
+    margin-left: 1em;
+}
+
+.proceed_to_payment{
+  background-color: var(--payment-button-bg-color);
+  color: var(--payment-text-color);
+  box-shadow: 0 1em 1em 0 hsla(245, 75%, 52%, 0.2);
+  margin-bottom: 1em;
+}
+
+.proceed_to_payment:hover{
+  background-color: var(--active-color);
+}
+
+.cancel_order{
+  color: var(--cancel-text-color);
+}
+
+.cancel_order:hover{
+  color: var(--emphasis-text-color);
+}
+
+/* desktop */
+@media (min-width: 43em) {
+  body{
+    background-image: var(--desktop-bg-image);
+  }
+  main{
+    width: 50%;
+    max-width: 24em;
+  }
+  main::before{
+    background-size: cover;
+    height: 12em;
+  }
+
+  .order_summary{
+    padding: 2.5em 2.5em 2em 2.5em;
+  }
+
+  .payment_buttons > button{
+    height: auto;
+  }
+}
