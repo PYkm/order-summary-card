@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [on Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj/hub)
+- Solution URL: [on Frontend Mentor](https://www.frontendmentor.io/solutions/order-summary-component-RCWx85xtbS)
 - Live Site URL: [on Github](https://pykm.github.io/order-summary-card/)
 
 ## My process
@@ -44,7 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-In this challenge, the image of a woman listening to music is purely decorative, so as the icon of music, so I use css to add them to the layout instead of creating image elements.
+In this challenge, the image of a woman listening to music is purely decorative, so the icon of music. Therefore I used css to add them to the layout instead of creating image elements.
 
 To add the image of a woman listening to music:
 
@@ -67,7 +67,7 @@ main::before{
 }
 ```
 
-It's the first time that I ever used the margin-left property to align flex items, so that the first two items appear on the left, and the last item appears on the right:
+It's the first time that I ever used the `margin-left` property to align flex items, so that the first two items appear on the left, and the last item appears on the right:
 
 ```html
 <div class="order_plan">
@@ -87,19 +87,19 @@ It's the first time that I ever used the margin-left property to align flex item
 }
 ```
 
-I also noticed that font-family set on body won't do anything for button elements.
+I also noticed that `font-family` set on body won't do anything for button elements.
 
 ### Continued development
 
 Technique that I'm not completely familiar with, can be found in this challenge:
-- Using margin-left or margin-right to split flex items.
+- Using `margin-left` or `margin-right` to split flex items.
 
 Technique that I found useful, although not using in this challenge:
 - SASS
 
 ### Useful resources
 
-- [Typical use cases of flexbox on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox) - This article includes many useful use cases of flexbox, I was using the margin-left technique to split flex items.
+- [Typical use cases of flexbox on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox) - This article includes many useful use cases of flexbox, I was using the `margin-left` technique to split flex items.
 
 ## Author
 
